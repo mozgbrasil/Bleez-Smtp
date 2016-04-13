@@ -7,7 +7,7 @@ Modulo de smtp para magento 2
 ### Via Composer
 
 ```sh
-composer require bleez/smtp
+composer require bleez/smtp --ignore-platform-reqs
 php bin/magento module:enable --clear-static-content Bleez_Smtp
 php bin/magento setup:upgrade
 ```
