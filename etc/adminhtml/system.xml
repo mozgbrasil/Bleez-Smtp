@@ -2,7 +2,7 @@
     <system>
         <section id="system">
             <group id="bleez_smtp" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Configurações SMTP</label>
+                <label>SMTP Config</label>
                 <field id="active" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Ativo</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
