@@ -1,0 +1,51 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="system">
+            <group id="bleez_smtp" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configurações SMTP</label>
+                <field id="active" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Ativo</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="auth" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use ssl</label>
+                    <source_model>Bleez\Smtp\Model\Config\Source\Auth</source_model>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="host" translate="label" type="text" sortOrder="3" showInDefault="2" showInWebsite="1" showInStore="1">
+                    <label>Host</label>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="port" translate="label" type="text" sortOrder="4" showInDefault="2" showInWebsite="1" showInStore="1">
+                    <label>Port</label>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="login" translate="label" type="text" sortOrder="5" showInDefault="2" showInWebsite="1" showInStore="1">
+                    <label>Login</label>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="password" translate="label" type="password" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Senha</label>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="ssl" translate="label" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use ssl</label>
+                    <source_model>Bleez\Smtp\Model\Config\Source\Yesnosmtp</source_model>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
