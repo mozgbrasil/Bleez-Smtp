@@ -24,7 +24,7 @@ class Transport implements \Magento\Framework\Mail\TransportInterface
             $smtpHost = $scopeConfig->getValue('system/bleez_smtp/host');
             $smtpConf = [
                 'auth' => $scopeConfig->getValue('system/bleez_smtp/auth'),
-                'tsl' => $scopeConfig->getValue('system/bleez_smtp/ssl'),
+                'ssl' => $scopeConfig->getValue('system/bleez_smtp/ssl'),
                 'port' => $scopeConfig->getValue('system/bleez_smtp/port'),
                 'username' => $scopeConfig->getValue('system/bleez_smtp/login'),
                 'password' => $scopeConfig->getValue('system/bleez_smtp/password')
